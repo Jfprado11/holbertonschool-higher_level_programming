@@ -2,7 +2,7 @@
 def main():
     import hidden_4
     hid = dir(hidden_4)
-    for i in len(hid):
+    for i in range(len(hid)):
         if hid[i][0] != "_":
             print(hid[i])
 
