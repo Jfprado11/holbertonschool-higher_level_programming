@@ -9,7 +9,7 @@ def main():
     else:
         print("{:d} arguments:".format(lenArgv - 1))
     for i in range(1, lenArgv):
-        print("{:d} : {:s}".format(i, argv[i]))
+        print("{:d}: {:s}".format(i, argv[i]))
 
 if __name__ == "__main__":
     main()
