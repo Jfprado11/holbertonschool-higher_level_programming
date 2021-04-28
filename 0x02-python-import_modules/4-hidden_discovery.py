@@ -4,7 +4,7 @@ def main():
     hid = dir(hidden_4)
     for i in len(hid):
         if hid[i][0] != "_":
-            print(hid)
+            print(hid[i])
 
 if __name__ == "__main__":
     main()
