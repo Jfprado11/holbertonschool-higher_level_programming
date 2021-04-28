@@ -3,9 +3,9 @@ def main():
     import sys
     lenArgv = len(sys.argv)
     if lenArgv == 2:
-        print(1, "argument:")
+        print(lenArgv - 1, "argument:")
     elif lenArgv <= 1:
-        print(0, "arguments.")
+        print(lenArgv - 1, "arguments.")
     else:
         print(lenArgv - 1, "arguments:")
     for i in range(1, lenArgv):
