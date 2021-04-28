@@ -3,13 +3,13 @@ def main():
     import sys
     lenArgv = len(sys.argv)
     if lenArgv == 2:
-        print(lenArgv - 1, "argument:")
+        print("{:d} argument:".format(lenArgv - 1))
     elif lenArgv <= 1:
-        print(lenArgv - 1, "arguments.")
+        print("{:d} arguments.".format(lenArgv - 1))
     else:
-        print(lenArgv - 1, "arguments:")
+        print("{:d} arguments:".format(lenArgv - 1))
     for i in range(1, lenArgv):
-        print(i, ":", sys.argv[i])
+        print("{:d} : {:s}".format(i, sys.argv[i]))
 
 if __name__ == "__main__":
     main()
