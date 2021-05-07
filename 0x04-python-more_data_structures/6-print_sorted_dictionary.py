@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    new_list = sorted(list(a_dictionary.keys()))
+    new_list = sorted(list(a_dictionary.iterkeys()))
     for hey in new_list:
-        v = a_dictionary[hey]
-        print("{} : {}".format(hey, v))
+        print("{} : {}".format(hey, a_dictionary[hey]))
