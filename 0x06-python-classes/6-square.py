@@ -10,8 +10,8 @@ class Square:
         """init the class
         args:
             param 1(size): the size of squere"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -36,12 +36,11 @@ class Square:
     @position.setter
     def position(self, value):
         """set the value of a tuple"""
-        for i in range(value):
+        for i in range(len(value)):
             if value[i] < 0:
-                raise TypeError("""position must be a tuple
-                of 2 positive integers""")
-            else:
-                self.__position[i] = value[i]
+                raise TypeError("""position must be a tuple\
+ of 2 positive integers""")
+        self.__position = value
 
     def area(self):
         """find the squere area"""
