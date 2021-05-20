@@ -40,7 +40,7 @@ class Square:
             raise TypeError("""position must be a tuple\
  of 2 positive integers""")
         for i in range(len(value)):
-            if isinstance(value[i], int) is False:
+            if isinstance(value[i], int) is False or value[i] < 0:
                 raise TypeError("""position must be a tuple\
  of 2 positive integers""")
         self.__position = value
@@ -53,7 +53,7 @@ class Square:
         """prints a squere with the '#'"""
         if self.__size == 0:
             print()
-        if self.__position[1] > 0:
+        elif self.__position[1] > 0:
             for i in range(self.__position[1]):
                 print()
         for i in range(self.__size):
