@@ -10,16 +10,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    def area(self):
-        """method to get the area of a rectangle"""
-        return self.__width * self.__height
-
-    def perimeter(self):
-        """method the get the area of a rectangle"""
-        if self.__height == 0 or self.__width == 0:
-            return 0
-        return (self.__width * 2) + (self.__height * 2)
-
     @property
     def width(self):
         """retriving width as a private instance"""
@@ -53,3 +43,14 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if self.__height < 0:
             raise ValueError("height must be >= 0")
+
+    def area(self):
+        """method to get the area of a rectangle"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """method the get the area of a rectangle"""
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        else:
+            return (self.__width * 2) + (self.__height * 2)
