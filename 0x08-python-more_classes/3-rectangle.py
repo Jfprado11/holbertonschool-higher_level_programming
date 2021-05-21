@@ -16,7 +16,8 @@ class Rectangle:
         for i in range(self.__height):
             for x in range(self.__width):
                 cont = cont + "#"
-            cont = cont + "\n"
+            if i < self.__height - 1:
+                cont = cont + "\n"
         return cont
 
     @property
