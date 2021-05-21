@@ -7,8 +7,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """initialization of the atributes"""
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -30,7 +30,7 @@ class Rectangle:
     @property
     def height(self):
         """retriving height as a private instance"""
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, value):
