@@ -13,7 +13,7 @@ class Rectangle:
     def __str__(self):
         """returs the representation of the rectangle with '#'"""
         cont = ""
-        if self.__height == 0 or self.__width:
+        if self.__height == 0 or self.__width == 0:
             return cont
         for i in range(self.__height):
             for x in range(self.__width):
