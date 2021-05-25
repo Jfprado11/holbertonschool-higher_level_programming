@@ -1,0 +1,23 @@
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> doc_module = __import__("3-say_my_name").__doc__
+>>> len_func = __import__("3-say_my_name").say_my_name.__doc__
+>>> len(doc_module.splitlines()) > 1
+True
+>>> len(len_func.splitlines()) > 1
+True
+>>> say_my_name("Juan", "Prado")
+My name is Juan Prado
+>>> say_my_name("Sebas")
+My name is Sebas 
+>>> say_my_name("juan", 2)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> say_my_name(None)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name(4, "hello")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
