@@ -31,3 +31,6 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 True
 >>> len(len_func.splitlines()) > 1
 True
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
