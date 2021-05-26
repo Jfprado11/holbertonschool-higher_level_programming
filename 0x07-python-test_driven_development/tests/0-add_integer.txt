@@ -27,3 +27,8 @@ TypeError: a must be an integer
 True
 >>> len(len_func.splitlines()) > 1
 True
+>>> import os
+>>> os.system("pep8 0-add_integer.py")
+0
+>>> os.popen('head -1 0-add_integer.py').read()
+'#!/usr/bin/python3\n'
