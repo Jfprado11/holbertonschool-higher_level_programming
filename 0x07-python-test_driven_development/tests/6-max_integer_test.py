@@ -13,7 +13,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 5, -8, 3, 8]), 8)
         self.assertEqual(max_integer([-8,-55555, -4444, -555]), -8)
         self.assertEqual(max_integer([1, 2, 4, 5]), 5)
+        self.assertEqual(max_integer([1, 2, 9, 4, 5]), 9)
         self.assertEqual(max_integer([44444444, 55555, 888888]), 44444444)
+        self.assertEqual(max_integer([2]), 2)
 
     def test_empty(self):
         """check the correct ouput for a list"""
