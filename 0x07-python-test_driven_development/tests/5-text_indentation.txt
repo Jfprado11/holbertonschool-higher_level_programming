@@ -1,0 +1,59 @@
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> doc_module = __import__("5-text_indentation").__doc__
+>>> len_func = __import__("5-text_indentation").text_indentation.__doc__
+>>> len(doc_module.splitlines()) > 1
+True
+>>> len(len_func.splitlines()) > 1
+True
+>>> text_indentation("hello.?: world")
+hello.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+world
+>>> text_indentation(3)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation("hello. let the party? begin: with")
+hello.
+<BLANKLINE>
+let the party?
+<BLANKLINE>
+begin:
+<BLANKLINE>
+with
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation("hola mundo")
+hola mundo
+>>> text_indentation("                  .        hfg        :")
+.
+<BLANKLINE>
+hfg        :
+<BLANKLINE>
+>>> text_indentation("         \n     .        hfg        :")
+<BLANKLINE>
+.
+<BLANKLINE>
+hfg        :
+<BLANKLINE>
+>>> text_indentation(""" \n     :  \n   .     ?    \n    """)
+<BLANKLINE>
+:
+<BLANKLINE>
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+<BLANKLINE>
+>>> import os
+>>> os.system("pep8 5-text_indentation.py")
+0
+>>> os.popen('head -1 5-text_indentation.py').read()
+'#!/usr/bin/python3\n'
