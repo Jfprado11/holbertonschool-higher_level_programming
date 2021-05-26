@@ -28,13 +28,3 @@ class TestMaxInteger(unittest.TestCase):
             max_integer([1, 2, 4.5])
             max_integer(True)
             max_integer("jhkdd")
-
-    def test_docmodule(self):
-        """test if have module documentation"""
-        temp = __import__('6-max_integer').__doc__
-        self.assertTrue(temp is not None and len(temp) > 4)
-
-    def test_docfunction(self):
-        """test if have function documentation"""
-        temp = __import__('6-max_integer').max_integer.__doc__
-        self.assertTrue(temp is not None and len(temp) > 4)
