@@ -36,7 +36,7 @@
 [3, -1, 5, -5]
 >>> list_four.print_sorted()
 [-5, -1, 3, 5]
->>> list_five = my_list()
+>>> list_five = MyList()
 >>> list_five.append(5)
 >>> list_five.print_sorted()
 [5]
