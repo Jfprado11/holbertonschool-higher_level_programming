@@ -11,32 +11,3 @@
 [3, 4, 5, 9]
 >>> print(lista)
 [4, 3, 5, 9]
->>> new_list = MyList()
->>> new_list.append(-2)
->>> new_list.append(-7)
->>> new_list.append(-9)
->>> new_list.print_sorted()
-[-9, -7, -2]
->>> print(new_list)
-[-2, -7, -9]
->>> list_two = MyList()
->>> list_two.append(1)
->>> list_two.append(2)
->>> list_two.append(3)
->>> list_two.print_sorted()
-[1, 2, 3]
->>> print(list_two)
-[1, 2, 3]
->>> list_four = MyList()
->>> list_four.append(3)
->>> list_four.append(-1)
->>> list_four.append(5)
->>> list_four.append(-5)
->>> print(list_four)
-[3, -1, 5, -5]
->>> list_four.print_sorted()
-[-5, -1, 3, 5]
->>> list_five = MyList()
->>> list_five.append(5)
->>> list_five.print_sorted()
-[5]
