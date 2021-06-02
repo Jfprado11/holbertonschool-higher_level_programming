@@ -18,10 +18,9 @@ class Square(Rectangle):
         containing the super class to bring up the methods
         from the paretn class
         """
-        super().__init__(size, size)
-        super().__str__()
         self.__size = size
         self.integer_validator("size", self.__size)
+        super().__init__(size, size)
 
     def area(self):
         """gives the area of a square"""
