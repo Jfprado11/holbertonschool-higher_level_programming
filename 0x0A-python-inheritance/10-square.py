@@ -19,6 +19,7 @@ class Square(Rectangle):
         from the paretn class
         """
         super().__init__(size, size)
+        super().__str__()
         self.__size = size
         self.integer_validator("size", self.__size)
 
