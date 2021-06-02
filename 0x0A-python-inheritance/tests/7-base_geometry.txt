@@ -1,4 +1,11 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> integer_validator = __import__("7-base_geometry").BaseGeometry.integer_validator
+>>> import os
+>>> os.popen("pep8 7-base_geometry.py").read()
+''
+>>> import os
+>>> os.popen("head -1 7-base_geometry.py").read()
+'#!/usr/bin/python3\n'
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
