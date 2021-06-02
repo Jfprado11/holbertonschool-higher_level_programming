@@ -10,4 +10,4 @@ def write_file(filename="", text=""):
     function that writes a file or create
     """
     with open(filename, mode="w", encoding="utf-8") as f:
-        f.write(text)
+        return f.write(text)
