@@ -14,12 +14,13 @@ class Square(Rectangle):
     """
 
     def __init__(self, size):
-        """ initializate the class
-        with its atributes
+        """ initiation of the class
+        containing the super class to bring up the methods
+        from the paretn class
         """
         super().__init__(size, size)
-        self.integer_validator("size", size)
         self.__size = size
+        self.integer_validator("size", self.__size)
 
     def area(self):
         """gives the area of a square"""
