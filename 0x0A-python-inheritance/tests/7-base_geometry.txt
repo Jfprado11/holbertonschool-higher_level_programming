@@ -1,26 +1,28 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+>>> area = __import__("7-base_geometry").BaseGeometry.area
+>>> integer_validator = __import__("7-base_geometry").BaseGeometry.integer_validator
 >>> bg = BaseGeometry()
->>> bg.integer_validator("name", "erer")
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+>>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
-    ...
+...
 TypeError: name must be an integer
->>> bg.integer_validator("hello", 2)
->>> bg.integer_validator("hola", 0)
+>>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
-    ...
-ValueError: hola must be greater than 0
->>> bg.integer_validator("name", -2)
+...
+ValueError: age must be greater than 0
+>>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
-    ...
-ValueError: name must be greater than 0
->>> nice = "hello"
->>> num = 3
->>> bg.integer_validator(nice, num)
->>> num = "hello"
->>> bg.integer_validator(nice, num)
+...
+ValueError: distance must be greater than 0
+>>> bg.integer_validator("name", True)
 Traceback (most recent call last):
-    ...
-TypeError: hello must be an integer
->>> print(bg.integer_validator("width", 89))
-None
+...
+TypeError: name must be an integer
+>>> import os
+>>> os.popen("pep8 7-base_geometry.py").read()
+''
+>>> import os
+>>> os.popen("head -1 7-base_geometry.py").read()
+'#!/usr/bin/python3\n'
