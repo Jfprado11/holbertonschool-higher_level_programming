@@ -31,3 +31,5 @@ ValueError: name must be greater than 0
 Traceback (most recent call last):
     ...
 TypeError: hello must be an integer
+>>> print(bg.integer_validator("width", 89))
+None
