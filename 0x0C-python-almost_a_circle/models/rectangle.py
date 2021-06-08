@@ -82,7 +82,35 @@ class Rectangle(Base):
 
     def display(self):
         """mehtod for display the rectangle"""
+        for y in range(self.__y):
+            print()
+
         for x in range(self.__height):
+            for l in range(self.__x):
+                print(" ", end="")
             for i in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """gives the string format of an class Rectangle"""
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
+            .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
+        if len(args) > 0:
+            for x in range(len(args)):
+                if x == 0:
+                    setattr(self, "id", args[0])
+                if x == 1:
+                    setattr(self, "width", args[1])
+                if x == 2:
+                    setattr(self, "height", args[2])
+                if x == 3:
+                    setattr(self, "x", args[3])
+                if x == 4:
+                    setattr(self, "y", args[4])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
