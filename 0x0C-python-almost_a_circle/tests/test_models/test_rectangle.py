@@ -4,7 +4,10 @@ task 0
 """
 from models.base import Base
 import unittest
+from unittest import mock
+from unittest.mock import patch
 from models.rectangle import Rectangle
+import io
 
 
 class TestRectangleClass(unittest.TestCase):
@@ -66,6 +69,74 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual(r2.area(), 40)
         r3 = Rectangle(1, 1)
         self.assertEqual(r3.area(), 1)
+
+    def test_draw_recntangle(self):
+        """testing if the stdout is correct or not"""
+        a = "###\n###\n###\n"
+        r1 = Rectangle(3, 3)
+        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as stdo:
+            r1.display()
+        self.assertEqual(stdo.getvalue(), a)
+        a = "####\n####\n####\n####\n####\n####\n"
+        r2 = Rectangle(4, 6)
+        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as stdo:
+            r2.display()
+        self.assertEqual(stdo.getvalue(), a)
+
+    def test_str_recntalge(self):
+        """testing if the output in str is correct"""
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(r1.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+        r2 = Rectangle(2, 5)
+        self.assertEqual(r2.__str__(), "[Rectangle] (1) 0/0 - 2/5")
+        r3 = Rectangle(5, 6, 7, 8)
+        self.assertEqual(r3.__str__(), "[Rectangle] (2) 7/8 - 5/6")
+
+    def test_display_1(self):
+        """testing if the input has a correct value"""
+        a = "\n\n  ##\n  ##\n  ##\n"
+        r1 = Rectangle(2, 3, 2, 2)
+        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as stdo:
+            r1.display()
+        self.assertEqual(stdo.getvalue(), a)
+        a = " ###\n ###\n"
+        r2 = Rectangle(3, 2, 1, 0)
+        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as stdo:
+            r2.display()
+        self.assertEqual(stdo.getvalue(), a)
+
+    def test_update_0(self):
+        """testing if the updates worked as expected"""
+        r1 = Rectangle(2, 2, 2, 2, 2)
+        r1.update(89)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 2/2 - 2/2")
+
+        r1.update(89, 2)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 2/2 - 2/2")
+
+        r1.update(89, 2, 3)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 2/2 - 2/3")
+
+        r1.update(89, 2, 3, 4)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/2 - 2/3")
+
+        r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/5 - 2/3")
+
+    def test_update_1(self):
+        r1 = Rectangle(10, 10, 10, 10)
+
+        r1.update(height=1)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/1")
+
+        r1.update(width=1, x=2)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 2/10 - 1/1")
+
+        r1.update(y=1, width=2, x=3, id=89)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 3/1 - 2/1")
+
+        r1.update(x=1, height=2, y=3, width=4)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 1/3 - 4/2")
 
 
 if __name__ == '__main__':
