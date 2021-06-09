@@ -40,4 +40,4 @@ class Base():
                 list_dict.append(list_objs[x].to_dictionary())
             serial = Base.to_json_string(list_dict)
             with open("{}.json".format(cls.__name__), "w") as file:
-                json.dump(serial, file)
+                file.write(serial)
