@@ -41,3 +41,11 @@ class Base():
             serial = Base.to_json_string(list_dict)
             with open("{}.json".format(cls.__name__), "w") as file:
                 file.write(serial)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """return the the represetantion of list into a list"""
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
