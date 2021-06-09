@@ -21,6 +21,12 @@ class TestBaseClass(unittest.TestCase):
         b3 = Base()
         self.assertEqual(b3.id, 2)
 
+    def test_json_string(self):
+        """checking if a string in json is retriving"""
+        v1 = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
+        self.assertEqual(Base.to_json_string(
+            [v1]), '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]')
+
 
 if __name__ == '__main__':
     unittest.main()
