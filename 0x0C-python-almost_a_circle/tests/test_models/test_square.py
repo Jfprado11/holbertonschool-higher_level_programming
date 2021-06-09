@@ -91,15 +91,6 @@ class TestSquareClass(unittest.TestCase):
         s1.update(size=7, id=89, y=1)
         self.assertEqual(s1.__str__(), "[Square] (89) 12/1 - 7")
 
-    def test_dict_square(self):
-        """checking if the correct dicctionary is good"""
-        s1 = Square(10, 2, 1)
-        self.assertEqual(s1.to_dictionary(), {
-                         'id': 1, 'x': 2, 'size': 10, 'y': 1})
-        r2 = Square(8, 9, 6, 4)
-        self.assertEqual(r2.to_dictionary(), {
-                         'id': 4, 'x': 9, 'size': 8, 'y': 6})
-
 
 if __name__ == '__main__':
     unittest.main()
