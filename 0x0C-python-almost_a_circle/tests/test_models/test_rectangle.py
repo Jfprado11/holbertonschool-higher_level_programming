@@ -41,6 +41,7 @@ class TestRectangleClass(unittest.TestCase):
     def test_raising_TypeError(self):
         """checking if it raises when it
         pases erros"""
+
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             b1 = Rectangle("hello", 2)
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
@@ -55,8 +56,10 @@ class TestRectangleClass(unittest.TestCase):
         raise a ValueError """
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             b1 = Rectangle(-1, 2)
+            b1 = Rectangle(0, 3)
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             b1 = Rectangle(2, -2)
+            b1 = Rectangle(2, 0)
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             b1 = Rectangle(1, 2, -2, 3)
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
