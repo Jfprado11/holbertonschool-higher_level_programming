@@ -12,12 +12,11 @@ if (args.length === 2 || args.length === 3) {
     }
   }
   function secondMax (arr) {
-    for (let i = arr.length - 2; i >= 0; i--) {
-      if (arr[i] !== arr[arr.length - 1]) {
-        return(arr[i]);
-      }
-    }
-    return (0);
+    firstLarge = Math.max(...arr);
+    index = arr.indexOf(firstLarge);
+    arr.splice(index, 1);
+    secondLarge = Math.max(...arr);
+    return (secondLarge);
   }
   arr.sort();
   console.log(secondMax(arr));
