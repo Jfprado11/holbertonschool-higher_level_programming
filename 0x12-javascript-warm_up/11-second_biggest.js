@@ -14,7 +14,7 @@ if (args.length === 2 || args.length === 3) {
   function secondMax (arr) {
     for (let i = arr.length - 2; i >= 0; i--) {
       if (arr[i] !== arr[arr.length - 1]) {
-        return(arr[i]);
+        return (arr[i]);
       }
     }
     return (0);
