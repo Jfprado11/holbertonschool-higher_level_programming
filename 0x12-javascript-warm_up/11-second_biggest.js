@@ -10,8 +10,5 @@ if (args.length === 2 || args.length === 3) {
       arr.push(args[i]);
     }
   }
-  function maxNum (arr) {
-    return arr.sort();
-  }
-  console.log(maxNum(arr));
+  console.log(arr);
 }
