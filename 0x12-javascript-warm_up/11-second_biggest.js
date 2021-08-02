@@ -10,9 +10,7 @@ if (args.length === 2 || args.length === 3) {
       arr.push(args[i]);
     }
   }
-  const large = Math.max(...arr);
-  const index = arr.indexOf(large);
-  arr.splice(index, 1);
-  seconLarge = Math.max(...arr);
-  console.log(seconLarge);
+  arr.sort();
+  arr.pop();
+  console.log(arr.length - 1);
 }
