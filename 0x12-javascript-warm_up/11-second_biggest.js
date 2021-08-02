@@ -11,7 +11,14 @@ if (args.length === 2 || args.length === 3) {
       arr.push(parseInt(args[x]));
     }
   }
+  function secondMax (arr) {
+    for (let i = arr.length - 2; i >= 0; i--) {
+      if (arr[i] !== arr[arr.length - 1]) {
+        return(arr[i]);
+      }
+    }
+    return (0);
+  }
   arr.sort();
-  arr.pop();
-  console.log(arr[arr.length - 1]);
+  console.log(secondMax(arr));
 }
