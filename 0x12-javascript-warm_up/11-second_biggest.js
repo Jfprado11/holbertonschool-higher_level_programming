@@ -18,6 +18,5 @@ if (args.length === 2 || args.length === 3) {
     const secondLarge = Math.max(...arr);
     return (secondLarge);
   }
-  arr.sort();
   console.log(secondMax(arr));
 }
