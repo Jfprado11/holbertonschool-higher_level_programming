@@ -10,5 +10,6 @@ if (args.length === 2 || args.length === 3) {
       arr.push(args[i]);
     }
   }
-  console.log(arr);
+
+  console.log(Math.max.apply(null, arr));
 }
