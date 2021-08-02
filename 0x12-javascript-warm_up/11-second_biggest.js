@@ -10,7 +10,8 @@ if (args.length === 2 || args.length === 3) {
       arr.push(args[i]);
     }
   }
-  arr.sort();
-  arr.pop();
-  console.log(arr.length - 1);
+  function maxNum(arr) {
+    return Math.max.apply(null, arr);
+  }
+  console.log(maxNum(arr));
 }
