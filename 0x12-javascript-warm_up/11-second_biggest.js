@@ -1,21 +1,23 @@
 #!/usr/bin/node
 
 const args = process.argv;
+
 if (args.length === 2 || args.length === 3) {
   console.log(0);
 } else {
   const arr = [];
-  for (let i = 0; i < args.length; i++) {
-    if (!isNaN(parseInt(args[i]))) {
-      arr.push(args[i]);
+  for (let x = 0; x < args.length; x++) {
+    if (!isNaN(parseInt(args[x]))) {
+      arr.push(parseInt(args[x]));
     }
   }
-  function secondMax(arr) {
-    const large = Math.max(...arr);
-    const index = arr.indexOf(large);
+  function secondMax (arr) {
+    firstLarge = Math.max(...arr);
+    index = arr.indexOf(firstLarge);
     arr.splice(index, 1);
-    const secondLarge = Math.max(...arr);
+    secondLarge = Math.max(...arr);
     return (secondLarge);
   }
+  arr.sort();
   console.log(secondMax(arr));
 }
