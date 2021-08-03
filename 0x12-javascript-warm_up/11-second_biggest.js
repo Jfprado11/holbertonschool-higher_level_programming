@@ -11,13 +11,9 @@ if (args.length === 2 || args.length === 3) {
       arr.push(parseInt(args[x]));
     }
   }
-  function secondMax (arr) {
-    firstLarge = Math.max(...arr);
-    index = arr.indexOf(firstLarge);
-    arr.splice(index, 1);
-    secondLarge = Math.max(...arr);
-    return (secondLarge);
-  }
-  arr.sort();
-  console.log(secondMax(arr));
+  const firstLarge = Math.max(...arr);
+  const index = arr.indexOf(firstLarge);
+  arr.splice(index, 1);
+  const secondLarge = Math.max(...arr);
+  console.log(secondLarge);
 }
