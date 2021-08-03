@@ -10,9 +10,12 @@ if (args.length === 2 || args.length === 3) {
       arr.push(args[i]);
     }
   }
-  const large = Math.max(...arr);
-  const index = arr.indexOf(large);
-  arr.splice(index, 1);
-  const secondLarge = Math.max(...arr);
-  console.log(secondLarge);
+  function secondMax(arr) {
+    const large = Math.max(...arr);
+    const index = arr.indexOf(large);
+    arr.splice(index, 1);
+    const secondLarge = Math.max(...arr);
+    return (secondLarge);
+  }
+  console.log(secondMax(arr));
 }
