@@ -7,7 +7,7 @@ module.exports = class Square extends Squ {
     if (c === undefined) {
       x = 'X';
     } else {
-      x = 'C';
+      x = c;
     }
     for (let i = 0; i < this.height; i++) {
       let arr = x;
