@@ -2,10 +2,10 @@
 """
 lists all states from the database hbtn_0e_0_usa
 """
-if __name__ == "__main__":
+import MySQLdb
+import sys
 
-    import MySQLdb
-    import sys
+if __name__ == "__main__":
 
     root = sys.argv[1]
     passw = sys.argv[2]

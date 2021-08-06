@@ -3,10 +3,10 @@
 takes in an argument and displays all values
 in the states table of hbtn_0e_0_usa where name matches the argument.
 """
-if __name__ == "__main__":
+import MySQLdb
+import sys
 
-    import MySQLdb
-    import sys
+if __name__ == "__main__":
 
     root = sys.argv[1]
     passw = sys.argv[2]
