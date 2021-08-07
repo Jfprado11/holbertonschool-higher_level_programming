@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     sql = """SELECT * FROM states
-    WHERE name LIKE {} ORDER BY 'states.id'""".format(name_search)
+    WHERE name LIKE '{}' ORDER BY states.id;""".format(name_search)
 
     cursor.execute(sql)
 
