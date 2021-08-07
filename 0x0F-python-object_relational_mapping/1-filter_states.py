@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     sql = """SELECT * FROM states
-    WHERE name LIKE 'N%' ORDER BY 'states.id' ASC"""
+    WHERE states.name LIKE 'N%' ORDER BY 'states.id'"""
 
     cursor.execute(sql)
 
