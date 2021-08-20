@@ -12,6 +12,7 @@ if __name__ == "__main__":
     datos = {"Authorization": "token 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"}
 
     response = requests.post(url, auth=(username, password))
+    print(response)
     information = response.json()
     if any("id" == key for key in information.keys()):
         print(information["id"])
