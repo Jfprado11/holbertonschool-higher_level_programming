@@ -9,6 +9,7 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
 
-    response = requests.post(url, auth=(username, password))
-    information = response.json()
-    print(information["id"])
+    response = requests.get(url, auth=(username, password))
+    if response.status_code == 200:
+        information = response.json()
+        print(information["id"])
