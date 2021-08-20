@@ -16,4 +16,4 @@ if __name__ == "__main__":
     if any("id" == key for key in information.keys()):
         print(information["id"])
     else:
-        print(None)
+        print("None")
