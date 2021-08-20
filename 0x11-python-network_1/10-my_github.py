@@ -10,8 +10,8 @@ if __name__ == "__main__":
     password = sys.argv[2]
 
     response = requests.get(url, auth=(username, password))
-    if response.status_code == 200:
-        information = response.json()
+    try:
+        information = response
         print(information["id"])
-    else:
-        print(None)
+    except:
+        print("None")
