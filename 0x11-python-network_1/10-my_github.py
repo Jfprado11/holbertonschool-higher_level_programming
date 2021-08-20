@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     response = requests.get(url, auth=(username, password))
     try:
-        information = response
+        information = response.json()
         print(information["id"])
     except:
         print("None")
