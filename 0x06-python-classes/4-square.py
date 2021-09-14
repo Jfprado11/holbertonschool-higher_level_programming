@@ -10,7 +10,7 @@ class Square:
         """init the class
         args:
             param 1(size): the size of squere"""
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):

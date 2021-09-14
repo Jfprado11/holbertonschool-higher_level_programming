@@ -4,29 +4,24 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-
 class TestMaxInteger(unittest.TestCase):
-    """checks all posible cases for task 6
-    """
-    def test_max_number(self):
-        """check the max number of a list"""
-        self.assertEqual(max_integer([1, 5, -8, 3, 8]), 8)
-        self.assertEqual(max_integer([-8,-55555, -4444, -555]), -8)
-        self.assertEqual(max_integer([1, 2, 4, 5]), 5)
-        self.assertEqual(max_integer([1, 2, 9, 4, 5]), 9)
-        self.assertEqual(max_integer([44444444, 55555, 888888]), 44444444)
-        self.assertEqual(max_integer([2]), 2)
+    """test the method of max int"""
 
-    def test_empty(self):
-        """check the correct ouput for a list"""
+    def test_maxInt(self):
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([7, 2, 3, 3]), 7)
+        self.assertEqual(max_integer([7, 2, 10, 3]), 10)
+        self.assertEqual(max_integer([7, 7, 3]), 7)
+        self.assertEqual(max_integer([-9, -7, -3]), -3)
+        self.assertEqual(max_integer([3]), 3)
+        self.assertEqual(max_integer([1, 2, -3]), 2)
+
+    def test_empty_list(self):
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer(), None)
 
-    def test_fails(self):
-        """check the type of errors"""
+    def test_error_checks(self):
         with self.assertRaises(TypeError):
-            max_integer([1, "hola"])
-            max_integer([1, [1, 3]])
-            max_integer([1, 2, 4.5])
-            max_integer(True)
-            max_integer("jhkdd")
+            max_integer([1, "juan"])
+            max_integer("hola")
+

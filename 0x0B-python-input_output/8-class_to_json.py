@@ -11,4 +11,5 @@ def class_to_json(obj):
     that returs a vars
     to a return a diccionary of an object
     """
-    return vars(obj)
+    diction = vars(obj)
+    return diction

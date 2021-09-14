@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ a moudule for a class
-that inherentce from the object reacriting a list
+that inherentce from the object reacreating a list
 """
 
 
