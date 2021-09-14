@@ -12,7 +12,7 @@ request.get({ url: url, json: true }, function (error, r, body) {
   for (let x = 0; x < films.length; x++) {
     const characrter = films[x].characters;
     for (let i = 0; i < characrter.length; i++) {
-      if (characrter[i] === 'https://swapi-api.hbtn.io/api/people/18/') {
+      if (characrter[i].endsWith('/18/')) {
         result += 1;
       }
     }
